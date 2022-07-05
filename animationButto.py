@@ -55,17 +55,3 @@ class AnimationButton(Label):
     @staticmethod
     def test():
         print('Button Clicked!')
-
-
-def main():
-    app = Tk()
-    app.geometry('400x300')
-    app['background'] = '#424242'
-
-    AnimationButton(app, text='ClickMe', fgcolor='black', bgcolor='green', event='1', command=AnimationButton.test).pack(expand=True)
-    AnimationButton(app, bgcolor='blue').pack(expand=True)
-
-    app.mainloop()
-
-if __name__ == '__main__':
-    main()
