@@ -22,11 +22,13 @@ AnimationButton(app, text='cancel', fgcolor='black', event='1').pack(side=RIGHT,
 from tkinter import LEFT, X, NW
 from animationButton import AnimationButton
 
-#Frame - container for buttons
+'''Frame - container for buttons
+'''
 M = Frame()
 M.pack(side=LEFT, padx=15)
 
-#Button - animated menu
+'''Button - animated menu
+'''
 AnimationButton(M, text='Monday', bgcolor='green', fgcolor='black').pack(anchor=NW, fill=X)
 AnimationButton(M, text='Tuesday', bgcolor='green', fgcolor='black').pack(anchor=NW, fill=X)
 AnimationButton(M, text='Wednesday', bgcolor='green', fgcolor='black').pack(anchor=NW, fill=X)
