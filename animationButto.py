@@ -56,8 +56,4 @@ class AnimationButton(Label):
 
     @staticmethod
     def test():
-<<<<<<< HEAD
         print('Button Clicked!')
-=======
-        print('Button Clicked!')
->>>>>>> b9f7889c1a2076552e999c176ac344bc36f4ee27
