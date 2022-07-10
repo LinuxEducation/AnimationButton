@@ -7,6 +7,9 @@
 from tkinter import RIGHT, SE
 from animationButton import AnimationButton
 
+'''app is a master (root) window object
+   first please create reference for Tk class
+'''
 AnimationButton(app, text='accept', fgcolor='black', event='1').pack(side=RIGHT, anchor=SE, padx=(5,10), pady=(0,5))
 AnimationButton(app, text='cancel', fgcolor='black', event='1').pack(side=RIGHT, anchor=SE, pady=(0,5))
 ```
