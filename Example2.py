@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, SOLID
+from tkinter import Tk, Label, Frame, SOLID, NW, W, LEFT, X
 
 class AnimationButton(Label):
     def __init__(self, container, text='Button', event='Enter', bgcolor='green', fgcolor='white', command=None):
@@ -20,7 +20,7 @@ class AnimationButton(Label):
                     'padx':                 20,
                     'pady':                 2}
 
-        self.configure(**settings)
+        self.configure(**settings, anchor=W)
         self.event(event)
 
     def event(self, event):
@@ -56,8 +56,26 @@ class AnimationButton(Label):
 
     @staticmethod
     def test():
-<<<<<<< HEAD
         print('Button Clicked!')
-=======
-        print('Button Clicked!')
->>>>>>> b9f7889c1a2076552e999c176ac344bc36f4ee27
+
+
+def main():
+    app = Tk()
+    app.geometry('650x400')
+    app['background'] = '#424242'
+
+    M = Frame()
+    M.pack(side=LEFT, padx=15)
+
+    AnimationButton(M, text='Monday', bgcolor='green', fgcolor='black').pack(anchor=NW, fill=X)
+    AnimationButton(M, text='Tuesday', bgcolor='green', fgcolor='black').pack(anchor=NW, fill=X)
+    AnimationButton(M, text='Wednesday', bgcolor='green', fgcolor='black').pack(anchor=NW, fill=X)
+    AnimationButton(M, text='Thursday', bgcolor='green', fgcolor='black').pack(anchor=NW, fill=X)
+    AnimationButton(M, text='Friday', bgcolor='green', fgcolor='black').pack(anchor=NW, fill=X)
+    AnimationButton(M, text='Saturday', bgcolor='blue').pack(anchor=NW, fill=X)
+    AnimationButton(M, text='Sunday', bgcolor='blue').pack(anchor=NW, fill=X)
+
+    app.mainloop()
+
+if __name__ == '__main__':
+    main()

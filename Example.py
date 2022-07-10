@@ -25,6 +25,8 @@ class AnimationButton(Label):
 
     def event(self, event):
         self.bind(f'<{event}>', self)
+        if event == 'Enter':
+            self.bind('<Button-1>', self)
 
     def __get_colors(self):
         animation_colors = {'green': ['#018201', '#009902', '#00b300', '#02cb00', '#00e600', '#00ff01', '#1aff10'],
@@ -59,7 +61,7 @@ class AnimationButton(Label):
 
 def main():
     app = Tk()
-    app.geometry('400x300')
+    app.geometry('350x250')
     app['background'] = '#424242'
 
     AnimationButton(app, text='ClickMe', fgcolor='black', bgcolor='green', event='1', command=AnimationButton.test).pack(expand=True)
