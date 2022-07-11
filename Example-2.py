@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, SOLID
+from tkinter import Tk, Label, Frame, SOLID, RIGHT, BOTH, SE
 
 class AnimationButton(Label):
     def __init__(self, container, text='Button', event='Enter', bgcolor='green', fgcolor='white', command=None):
@@ -61,11 +61,12 @@ class AnimationButton(Label):
 
 def main():
     app = Tk()
-    app.geometry('350x250')
+    app.geometry('650x350')
     app['background'] = '#424242'
 
-    AnimationButton(app, text='ClickMe', fgcolor='black', bgcolor='green', event='1', command=AnimationButton.test).pack(expand=True)
-    AnimationButton(app, bgcolor='blue').pack(expand=True)
+    Frame(highlightbackground="black", highlightthickness=1.2, bg='#424242').pack(padx=10, pady=[15,5], fill=BOTH, expand=True)
+    AnimationButton(app, text='accept', fgcolor='black', event='1').pack(side=RIGHT, anchor=SE, padx=(5,10), pady=(0,5))
+    AnimationButton(app, text='cancel', fgcolor='black', event='1').pack(side=RIGHT, anchor=SE, pady=(0,5))
 
     app.mainloop()
 
